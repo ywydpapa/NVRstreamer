@@ -9,7 +9,7 @@ gi.require_version("GstRtspServer", "1.0")
 from gi.repository import GLib, GObject, Gst, GstRtsp, GstRtspServer
 
 PIPELINE = (
-    "( rtspsrc location=rtsp://coredjk:core2020@192.168.108.133:554/Streaming/Channels/202 latency=0 ! rtph264depay ! h264parse ! rtph264pay name>
+    "( rtspsrc location=rtsp://coredjk:core2020@192.168.108.133:554/Streaming/Channels/202 latency=0 ! rtph264depay ! h264parse ! rtph264pay name=pay0 pt=96)")
 
 
 def main():
